@@ -1,0 +1,46 @@
+/* Reset box-sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins and padding */
+html, body, main, div, h1, h2, h3, p, 
+a, img, ul, li, form, label,
+figure, figcaption, footer, header, 
+nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset */
+footer, header, nav, section {
+  display: block;
+}
+
+/* Preserve list styles but reset margins */
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* Remove default text decoration */
+a {
+  text-decoration: none;
+}
+
+/* Reset button styles */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Form element reset */
+input, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+}

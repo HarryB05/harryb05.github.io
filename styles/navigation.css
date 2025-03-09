@@ -1,0 +1,40 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(20, 25, 30, 0.9);
+    z-index: 1000;
+    padding: 10px 0;
+    backdrop-filter: blur(10px);
+    transition: height 0.3s ease-in-out;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00aaff;
+}
+
+nav ul .login {
+    position: absolute;
+    right: 20px;
+    transform: translateY(-50%);
+}

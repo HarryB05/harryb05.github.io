@@ -1,0 +1,24 @@
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content should expand to push the footer to the bottom */
+main {
+    flex: 1;
+}
+
+section {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    backdrop-filter: blur(10px);
+}
