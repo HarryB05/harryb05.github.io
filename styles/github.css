@@ -1,7 +1,7 @@
 .github-graph {
     display: block;
     width: 80%;
-    max-width: 50em;
+    max-width: 40em;
     height: auto;
     margin: 1.25em auto;
     border-radius: 0.625em;
@@ -12,7 +12,7 @@
 
 figcaption {
     text-align: center;
-    font-size: 0.75rem;
+    font-size: 0.5625rem;
     color: #666;
     margin-top: 0.5em;
 }
