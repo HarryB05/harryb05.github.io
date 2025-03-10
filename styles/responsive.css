@@ -1,16 +1,16 @@
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 65.625em) {
     header {
-        padding: 5px 0;
+        padding: 0.3125em 0;
     }
 
     nav ul {
         flex-direction: column;
         align-items: center;
-        padding: 5px;
+        padding: 0.3125em;
     }
 
     nav ul li {
-        margin: 5px 0;
+        margin: 0.3125em 0;
         width: 100%;
         text-align: center;
     }
@@ -18,7 +18,7 @@
     nav ul .login {
         position: static;
         transform: none;
-        margin-top: 5px;
+        margin-top: 0.3125em;
     }
 
     .box-item {
@@ -27,29 +27,29 @@
     }
 
     .box-logo {
-        width: 80px;
-        height: 80px;
+        width: 5em;
+        height: 5em;
         display: block;
-        margin: 0 auto 10px auto; /* Centers logo and adds space below */
+        margin: 0 auto 0.625em auto;
     }
 
     .box-list {
-        gap: 15px;
+        gap: 0.9375em;
     }
 
     .box-item {
-        margin-bottom: 15px;
+        margin-bottom: 0.9375em;
     }
 
     .box-category {
-        margin-bottom: 30px;
+        margin-bottom: 1.875em;
     }
 
     .box-content {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center logo */
-        text-align: left; /* Ensure text remains left-aligned */
+        align-items: center;
+        text-align: left;
     }
 
     .box-header {
@@ -58,7 +58,7 @@
     }
 
     .nested-box-item {
-        padding: 15px;
+        padding: 0.9375em;
     }
 
     form {
@@ -66,7 +66,7 @@
     }
 
     input, textarea {
-        width: calc(100% - 20px);
+        width: calc(100% - 1.25em);
     }
 
     .github-graph {

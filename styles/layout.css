@@ -10,15 +10,15 @@ main {
 }
 
 section {
-    max-width: 900px;
+    max-width: 56.25em;
     margin: auto;
     text-align: center;
-    padding: 50px 20px;
+    padding: 3.125em 1.25em;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 1.25em;
     color: white;
     backdrop-filter: blur(10px);
 }

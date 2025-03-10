@@ -5,7 +5,7 @@ header {
     width: 100%;
     background: rgba(20, 25, 30, 0.9);
     z-index: 1000;
-    padding: 10px 0;
+    padding: 0.625em 0;
     backdrop-filter: blur(10px);
     transition: height 0.3s ease-in-out;
 }
@@ -15,11 +15,11 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 0.625em;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 0.9375em;
 }
 
 nav ul li a {
@@ -35,6 +35,6 @@ nav ul li a:hover {
 
 nav ul .login {
     position: absolute;
-    right: 20px;
+    right: 1.25em;
     transform: translateY(-50%);
 }
