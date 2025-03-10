@@ -22,7 +22,7 @@
     }
 
     .box-item {
-        margin: 0 auto;
+        margin: 0 auto 0.9375em auto;
         width: 90%;
     }
 
@@ -35,10 +35,11 @@
 
     .box-list {
         gap: 0.9375em;
-    }
-
-    .box-item {
-        margin-bottom: 0.9375em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-left: 0;
     }
 
     .box-category {
