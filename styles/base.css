@@ -8,12 +8,12 @@ body {
 
 h1 {
     color: #ffffff;
-    font-size: 1.25em;
+    font-size: 0.9375em;
 }
 
 h2 {
     color: #ffffff;
-    font-size: 1.5625em;
+    font-size: 1.171875em;
     margin-bottom: 0.625em;
 }
 
@@ -86,22 +86,22 @@ a {
 
 .box-header h3 {
     color: #00aaff;
-    font-size: 1.5625em;
+    font-size: 1.171875em;
 }
 
 .box-header h2 {
     color: #ffffff;
-    font-size: 1.25em;
+    font-size: 0.9375em;
 }
 
 .box-header h1 {
     color: #ffffff;
-    font-size: 1.25em;
+    font-size: 0.9375em;
 }
 
 .box-logo {
-    width: 6.25em;
-    height: 6.25em;
+    width: 4.6875em;
+    height: 4.6875em;
     border-radius: 0.5em;
 }
 
@@ -137,7 +137,7 @@ a {
 
 #typing-title {
     font-family: 'JetBrains Mono';
-    font-size: 2.5em;
+    font-size: 1.875em;
     color: #ffffff;
     text-align: center;
     white-space: nowrap; /* Prevents text wrapping */
@@ -188,7 +188,7 @@ a {
 
 .warning {
     color: #ff4444;
-    font-size: 1.125em;
+    font-size: 0.84375em;
     font-weight: bold;
     text-align: center;
     margin-top: 1.25em;

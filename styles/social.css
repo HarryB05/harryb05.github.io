@@ -3,11 +3,12 @@
     justify-content: center;
     gap: 0.9375em;
     margin-top: 0.625em;
+    padding-bottom: 0.625em;
 }
 
 .social-logo {
-    width: 3.125em;
-    height: 3.125em;
+    width: 2.34375em;
+    height: 2.34375em;
     border-radius: 0.5em;
     transition: transform 0.3s ease-in-out;
 }

@@ -27,8 +27,8 @@
     }
 
     .box-logo {
-        width: 5em;
-        height: 5em;
+        width: 3.75em;
+        height: 3.75em;
         display: block;
         margin: 0 auto 0.625em auto;
     }
@@ -58,6 +58,14 @@
         text-align: left;
     }
 
+    .box-header h3 {
+        font-size: 0.87890625em; /* 75% of 1.171875em */
+    }
+
+    .box-header h2, .box-header h1 {
+        font-size: 0.703125em; /* 75% of 0.9375em */
+    }
+
     .nested-box-item {
         padding: 0.9375em;
     }
@@ -73,5 +81,19 @@
     .github-graph {
         width: 90%;
         max-width: 100%;
+    }
+
+    .social-logo {
+        width: 1.7578125em;
+        height: 1.7578125em;
+        border-radius: 0.25em;
+    }
+
+    #typing-title {
+        font-size: 1.40625em;
+    }
+
+    .warning {
+        font-size: 0.6328125em;
     }
 }

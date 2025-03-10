@@ -27,6 +27,7 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
+    font-size: 0.75em;
 }
 
 nav ul li a:hover {
