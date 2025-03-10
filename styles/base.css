@@ -21,6 +21,10 @@ a {
     text-decoration: none;
 }
 
+.footer-text {
+    font-size: 0.6em;
+}
+
 .material-icons {
     color: #ffffff;
     vertical-align: middle;
