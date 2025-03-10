@@ -8,13 +8,13 @@ body {
 
 h1 {
     color: #ffffff;
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 h2 {
     color: #ffffff;
-    font-size: 25px;
-    margin-bottom: 10px;
+    font-size: 1.5625em;
+    margin-bottom: 0.625em;
 }
 
 a {
@@ -47,16 +47,16 @@ a {
     display: flex;
     flex-direction: column;
     background: rgba(20, 25, 30, 0.9);
-    padding: 20px;
-    border-radius: 10px;
+    padding: 1.25em;
+    border-radius: 0.625em;
     width: 100%;
-    max-width: 800px;
-    margin-bottom: 15px;
+    max-width: 50em;
+    margin-bottom: 0.9375em;
 }
 
 .box-item ul li {
     text-align: left;
-    padding: 10px;
+    padding: 0.625em;
 }
 
 .box-item:hover {
@@ -81,34 +81,34 @@ a {
 .box-header {
     flex: 1;
     text-align: left;
-    margin-left: 15px;
+    margin-left: 0.9375em;
 }
 
 .box-header h3 {
     color: #00aaff;
-    font-size: 25px;
+    font-size: 1.5625em;
 }
 
 .box-header h2 {
     color: #ffffff;
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 .box-header h1 {
     color: #ffffff;
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 .box-logo {
-    width: 100px;
-    height: 100px;
-    border-radius: 8px;
+    width: 6.25em;
+    height: 6.25em;
+    border-radius: 0.5em;
 }
 
 .box-time {
     font-style: italic;
     color: #cccccc;
-    margin: 5px 0;
+    margin: 0.3125em 0;
 }
 
 .nested-boxs {
@@ -118,32 +118,32 @@ a {
 
 .nested-box-item {
     background: rgba(30, 35, 40, 0.9);
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 10px;
+    padding: 0.625em;
+    border-radius: 0.5em;
+    margin-top: 0.625em;
 }
 
 .nested-box-item ul li {
     text-align: left;
-    padding: 10px;
+    padding: 0.625em;
 }
 
 .nested-box-item-group {
     background: rgba(20, 25, 30, 0.95);
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 10px;
+    padding: 0.625em;
+    border-radius: 0.5em;
+    margin-top: 0.625em;
 }
 
 #typing-title {
     font-family: 'JetBrains Mono';
-    font-size: 40px;
+    font-size: 2.5em;
     color: #ffffff;
     text-align: center;
     white-space: nowrap; /* Prevents text wrapping */
     overflow: hidden;
     display: inline-block;
-    border-right: 2px solid transparent;
+    border-right: 0.125em solid transparent;
 }
 
 .cursor {
@@ -161,9 +161,9 @@ a {
 .collapsible-header {
     cursor: pointer;
     background-color: rgba(20, 25, 30, 0.95);
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 10px;
+    padding: 0.625em;
+    border-radius: 0.5em;
+    margin-top: 0.625em;
     color: #ffffff;
     text-align: left;
     position: relative;
@@ -171,7 +171,7 @@ a {
 
 .collapsible-header::after {
     content: "▼";
-    font-size: 16px;
+    font-size: 1em;
     float: right;
 }
 
@@ -182,14 +182,14 @@ a {
 .collapsible-content {
     display: none;
     overflow: hidden;
-    padding: 0 10px;
+    padding: 0 0.625em;
     transition: max-height 0.3s ease-out;
 }
 
 .warning {
     color: #ff4444;
-    font-size: 18px;
+    font-size: 1.125em;
     font-weight: bold;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 1.25em;
 }
