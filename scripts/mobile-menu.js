@@ -1,14 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
+    let initializationAttempts = 0;
+    const MAX_ATTEMPTS = 10;
+    const RETRY_INTERVAL = 100; // milliseconds
+
     function initializeMobileMenu() {
-        console.log('Initializing mobile menu...');
+        console.log('Initializing mobile menu... Attempt:', initializationAttempts + 1);
+        
         const hamburgerMenu = document.querySelector('.hamburger-menu');
         const navClose = document.querySelector('.nav-close');
         const mainNav = document.querySelector('.main-nav');
         const body = document.querySelector('body');
 
         if (!hamburgerMenu || !navClose || !mainNav) {
-            console.error('Mobile menu elements not found, waiting for content to load...');
-            return false;
+            console.log('Mobile menu elements not found yet. Will retry...');
+            
+            if (initializationAttempts < MAX_ATTEMPTS) {
+                initializationAttempts++;
+                setTimeout(initializeMobileMenu, RETRY_INTERVAL);
+                return false;
+            } else {
+                console.error('Failed to initialize mobile menu after maximum attempts');
+                return false;
+            }
         }
 
         console.log('Mobile menu elements found, setting up event listeners...');
@@ -61,15 +74,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
+        console.log('Mobile menu initialized successfully');
         return true;
     }
 
-    // Try to initialize immediately
-    if (!initializeMobileMenu()) {
-        // If initialization fails, wait for content to load
-        window.addEventListener('contentLoaded', function() {
-            console.log('Content loaded, attempting to initialize mobile menu...');
-            initializeMobileMenu();
-        });
-    }
+    // Start initialization process
+    initializeMobileMenu();
+
+    // Also listen for content loaded event
+    window.addEventListener('contentLoaded', function() {
+        console.log('Content loaded event received, reinitializing mobile menu...');
+        initializationAttempts = 0; // Reset attempts
+        initializeMobileMenu();
+    });
 }); 
