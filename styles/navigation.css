@@ -20,6 +20,7 @@ nav ul {
 
 nav ul li {
     margin: 0 0.9375em;
+    position: relative;
 }
 
 nav ul li a {
@@ -28,10 +29,23 @@ nav ul li a {
     font-weight: bold;
     transition: 0.3s;
     font-size: 0.75em;
+    padding: 0.5em 0;
+    position: relative;
 }
 
-nav ul li a:hover {
-    color: #00aaff;
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00aaff;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
 }
 
 nav ul .login {
