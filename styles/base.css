@@ -197,3 +197,40 @@ a {
     text-align: center;
     margin-top: 1.25em;
 }
+
+.github-source-code {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.github-source-code:hover {
+    transform: scale(1.1);
+}
+
+.page-description {
+    width: 500px;
+    max-width: 500px;
+    margin: 10px auto;
+    text-align: center;
+    color: #e6edf3;
+    line-height: 1.5;
+    display: block;
+}
+
+.about-me {
+    max-width: 600px;
+    margin: 1.5em auto;
+    padding: 0 0 2.5em 0;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.about-me p {
+    color: #e6edf3;
+    font-size: 1.1em;
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+}
