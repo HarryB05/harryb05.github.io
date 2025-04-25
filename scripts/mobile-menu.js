@@ -1,15 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Wait for a short delay to ensure header content is loaded
-    setTimeout(() => {
+    function initializeMobileMenu() {
+        console.log('Initializing mobile menu...');
         const hamburgerMenu = document.querySelector('.hamburger-menu');
         const navClose = document.querySelector('.nav-close');
         const mainNav = document.querySelector('.main-nav');
         const body = document.querySelector('body');
 
         if (!hamburgerMenu || !navClose || !mainNav) {
-            console.error('Mobile menu elements not found');
-            return;
+            console.error('Mobile menu elements not found, waiting for content to load...');
+            return false;
         }
+
+        console.log('Mobile menu elements found, setting up event listeners...');
 
         // Function to open menu
         function openMenu() {
@@ -25,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Toggle menu on hamburger click
         hamburgerMenu.addEventListener('click', function(e) {
+            console.log('Hamburger menu clicked');
             e.stopPropagation();
             if (mainNav.classList.contains('active')) {
                 closeMenu();
@@ -57,5 +60,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 closeMenu();
             }
         });
-    }, 100); // Small delay to ensure header is loaded
+
+        return true;
+    }
+
+    // Try to initialize immediately
+    if (!initializeMobileMenu()) {
+        // If initialization fails, wait for content to load
+        window.addEventListener('contentLoaded', function() {
+            console.log('Content loaded, attempting to initialize mobile menu...');
+            initializeMobileMenu();
+        });
+    }
 }); 
