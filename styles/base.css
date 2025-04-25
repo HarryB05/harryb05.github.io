@@ -210,13 +210,14 @@ a {
 }
 
 .page-description {
-    width: 500px;
-    max-width: 500px;
+    width: min(90%, 500px);
     margin: 10px auto;
     text-align: center;
     color: #e6edf3;
     line-height: 1.5;
     display: block;
+    padding: 0 1em;
+    white-space: normal;
 }
 
 .about-me {
