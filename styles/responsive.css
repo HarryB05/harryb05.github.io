@@ -1,6 +1,8 @@
 @media screen and (max-width: 65.625em) {
     header {
         padding: 0.3125em 0;
+        background: transparent;
+        backdrop-filter: none;
     }
 
     nav ul {
@@ -59,11 +61,11 @@
     }
 
     .box-header h3 {
-        font-size: 0.87890625em; /* 75% of 1.171875em */
+        font-size: 0.87890625em;
     }
 
     .box-header h2, .box-header h1 {
-        font-size: 0.703125em; /* 75% of 0.9375em */
+        font-size: 0.703125em;
     }
 
     .nested-box-item {
@@ -96,4 +98,91 @@
     .warning {
         font-size: 0.6328125em;
     }
+
+    .hamburger-menu {
+        display: block !important;
+        background: rgba(20, 25, 30, 0.9);
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100vh;
+        background: rgba(20, 25, 30, 0.9);
+        transform: translateX(-100%);
+        z-index: 999;
+        padding: 20px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+    }
+
+    .main-nav.active {
+        transform: translateX(0);
+    }
+
+    .nav-close {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 0;
+        margin-top: 40px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 8px 0;
+        color: #ffffff;
+    }
+}
+
+/* Mobile Menu Styles */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background: transparent;
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+.hamburger-menu .material-icons {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.nav-close {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.nav-close .material-icons {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.main-nav {
+    transition: transform 0.3s ease-in-out;
+}
+
+.main-nav.active {
+    transform: translateX(0);
 }
