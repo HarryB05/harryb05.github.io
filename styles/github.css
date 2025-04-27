@@ -1,28 +1,132 @@
-.github-graph {
-    display: block;
-    width: 80%;
-    max-width: 40em;
-    height: auto;
-    margin: 1.25em auto;
-    border-radius: 0.625em;
-    padding: 0.625em;
-    background-color: rgba(20, 25, 30, 0.9);
-    box-shadow: 0 0.3125em 0.9375em rgba(0, 170, 255, 0.8);
+/* Custom tooltip for contribution graph */
+.contribution-tooltip {
+    position: fixed;
+    z-index: 1000;
+    background: #22272e;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.95em;
+    box-shadow: 0 2px 12px #000a;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.12s;
+    white-space: nowrap;
+    font-family: 'Inter', 'JetBrains Mono', monospace, sans-serif;
 }
 
-figcaption {
+/* Contribution Graph */
+#github-contributions-container {
+    background: #181a1b;
+    border: 2px solid #2196f3;
+    box-shadow: 0 0 16px 2px #2196f3, 0 0 0 1px #0d1117;
+    border-radius: 12px;
+    padding: 24px 16px 16px 16px;
+    margin: 32px auto;
     text-align: center;
-    font-size: 0.5625rem;
-    color: #666;
-    margin-top: 0.5em;
+    width: fit-content;
 }
 
-figcaption a {
-    color: #00aaff;
-    text-decoration: none;
-    font-weight: 600;
+#github-contributions.contribution-graph {
+    display: inline-grid;
+    grid-template-columns: repeat(53, 12px);
+    grid-auto-rows: 12px;
+    gap: 3px;
+    background: transparent;
+    padding: 12px 0;
 }
 
-figcaption a:hover {
-    color: #0077cc;
+.contribution-cell {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    transition: box-shadow 0.2s;
+    box-shadow: 0 0 2px #0008;
 }
+
+.contribution-cell:hover {
+    box-shadow: 0 0 8px #2196f3, 0 0 2px #0008;
+    z-index: 2;
+    position: relative;
+}
+
+#github-contributions-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    flex-direction: row;
+}
+
+#github-contributions-graph-container {
+    display: grid;
+    grid-template-rows: 20px 112px; /* month labels, then grid (7*16px) */
+    grid-template-columns: 32px auto; /* day labels, then graph */
+}
+
+#github-month-labels {
+    display: grid;
+    grid-template-columns: 32px repeat(var(--weeks), 15px);
+    font-size: 1em;
+    color: #8b949e;
+    font-family: 'Inter', 'JetBrains Mono', monospace, sans-serif;
+    pointer-events: none;
+    z-index: 1;
+    height: 20px;
+    align-items: end;
+    margin-top: 5px;
+}
+
+#github-contributions-labels {
+    display: grid;
+    grid-template-rows: repeat(7, 12px);
+    row-gap: 3px;
+    grid-row: 2;
+    grid-column: 1;
+    font-size: 0.9em;
+    color: #8b949e;
+    font-family: 'Inter', 'JetBrains Mono', monospace, sans-serif;
+    height: 111px;
+    min-width: 32px;
+    text-align: right;
+    margin-top: 32px;
+    padding-left: 30px;
+}
+
+#github-contributions-labels div {
+    display: flex;
+    align-items: center;
+    height: 12px;
+    justify-content: flex-end;
+}
+
+#github-contributions-labels div:nth-child(2) { /* Mon */
+    justify-content: flex-start;
+}
+
+#github-contributions-labels div:nth-child(4) { /* Wed */
+    justify-content: center;
+}
+
+#github-contributions-labels div:nth-child(6) { /* Fri */
+    justify-content: flex-end;
+}
+
+#github-contributions {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.github-month-label {
+    text-align: left;
+    min-width: 15px;
+    flex-grow: 1;
+    height: 20px;
+    line-height: 20px;
+}
+
+.github-month-label:first-child {
+    min-width: 32px;
+    flex-grow: 0;
+}
+
