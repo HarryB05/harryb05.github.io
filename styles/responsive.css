@@ -82,8 +82,7 @@
     }
 
     .github-graph {
-        width: 90%;
-        max-width: 100%;
+        display: none;
     }
 
     .about-me {
@@ -202,6 +201,221 @@
 
     .footer-text {
         font-size: 0.6em;
+    }
+}
+
+@media screen and (max-width: 48em) {
+    header {
+        padding: 1em;
+        background: transparent;
+        backdrop-filter: none;
+        border-bottom: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.3125em;
+    }
+
+    nav ul li {
+        margin: 0.3125em 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul .login {
+        position: static;
+        transform: none;
+        margin-top: 0.3125em;
+    }
+
+    .box-item {
+        margin-bottom: 0.9375em;
+        width: 90%;
+    }
+
+    .box-logo {
+        width: 3.75em;
+        height: 3.75em;
+        display: block;
+        margin: 0 auto 0.625em auto;
+    }
+
+    .box-list {
+        /* gap: 0.9375em; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .box-category {
+        margin-bottom: 1.875em;
+    }
+
+    .box-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+
+    .box-header {
+        width: 100%;
+        text-align: left;
+    }
+
+    .box-header h3 {
+        font-size: 1.1em;
+    }
+
+    .box-header h2, .box-header h1 {
+        font-size: 0.9em;
+    }
+
+    .nested-box-item {
+        padding: 0.9375em;
+    }
+
+    form {
+        width: 50%;
+    }
+
+    input, textarea {
+        width: calc(100% - 1.25em);
+    }
+
+    .github-graph {
+        display: none !important;
+    }
+
+    .about-me {
+        max-width: 90%;
+        margin: 1em auto;
+        padding: 0 0 2em 0;
+    }
+
+    .about-me p {
+        font-size: 1em;
+        line-height: 1.6;
+        padding: 0 1em;
+    }
+
+    .social-logo {
+        width: 2.5em;
+        height: 2.5em;
+        border-radius: 0.5em;
+    }
+
+    #typing-title {
+        font-size: 1.40625em;
+    }
+
+    .warning {
+        font-size: 0.6328125em;
+    }
+
+    .hamburger-menu {
+        display: block !important;
+        background: rgba(20, 25, 30, 0.95);
+        padding: 0.8em;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 280px;
+        height: 100vh;
+        background: rgba(20, 25, 30, 0.98);
+        transform: translateX(-100%);
+        z-index: 999;
+        padding: 2em;
+        box-shadow: 2px 0 20px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .main-nav.active {
+        transform: translateX(0);
+    }
+
+    .nav-close {
+        display: block;
+        position: absolute;
+        top: 1.5em;
+        right: 1.5em;
+        padding: 0.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1em 0;
+        margin-top: 2em;
+        gap: 1.5em;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0.5em 0;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1em;
+    }
+
+    nav ul li a::after {
+        display: none;
+    }
+
+    nav ul li a:hover {
+        color: #00aaff;
+        padding-left: 0.5em;
+    }
+
+    nav ul li.active a {
+        color: #00aaff;
+    }
+
+    .hamburger-menu .material-icons {
+        font-size: 1.5em;
+        color: #ffffff;
+    }
+
+    .nav-close .material-icons {
+        font-size: 1.5em;
+        color: #ffffff;
+    }
+
+    .page-description {
+        width: 85%;
+        margin: 1em auto;
+        font-size: 1em;
+        line-height: 1.6;
+        padding: 0;
+        white-space: normal;
+        word-break: normal;
+    }
+
+    .footer-text {
+        font-size: 0.6em;
+    }
+
+    #github-contributions-container,
+    #github-contributions-wrapper,
+    #github-contributions-graph-container,
+    #github-contributions-labels,
+    #github-month-labels,
+    #github-contributions {
+        display: none !important;
     }
 }
 
