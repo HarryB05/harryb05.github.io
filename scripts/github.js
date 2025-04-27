@@ -6,7 +6,7 @@ const colours = {
     4: '#40c463'   // very high
 };
 
-fetch('/assets/images/contributions.json')
+fetch('/assets/contributions.json')
     .then(response => response.json())
     .then(data => {
         // Sort by date ascending
@@ -28,6 +28,13 @@ fetch('/assets/images/contributions.json')
         const weeks = [];
         for (let i = 0; i < paddedData.length; i += 7) {
             weeks.push(paddedData.slice(i, i + 7));
+        }
+
+        // --- Update Title with Total Contributions ---
+        const totalContributions = data.reduce((sum, day) => sum + (day.count || 0), 0) + 1;
+        const titleElem = document.querySelector('#github-contributions-container h2');
+        if (titleElem) {
+            titleElem.textContent = `${totalContributions} contributions in the last year`;
         }
 
         // --- Month Labels ---
@@ -110,7 +117,7 @@ fetch('/assets/images/contributions.json')
                     const dateObj = new Date(day.date);
                     const options = { year: 'numeric', month: 'short', day: 'numeric' };
                     const dateStr = dateObj.toLocaleDateString(undefined, options);
-                    cell.dataset.tooltip = dateStr;
+                    cell.dataset.tooltip = `${day.count || 0} contribution${day.count === 1 ? '' : 's'} on ${dateStr}`;
                     cell.style.backgroundColor = colours[day.level];
                 } else {
                     cell.style.backgroundColor = colours[0];
@@ -135,8 +142,11 @@ fetch('/assets/images/contributions.json')
                 container.appendChild(cell);
             }
         }
+
+        // Show the container once everything is loaded
+        document.getElementById('github-contributions-container').classList.add('loaded');
     })
     .catch(error => {
         console.error('Error loading contributions:', error);
-        document.getElementById('github-contributions').innerText = 'Failed to load contributions.';
+        document.getElementById('github-contributions').innerText = '';
     }); 
