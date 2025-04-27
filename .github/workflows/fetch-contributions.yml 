@@ -2,8 +2,14 @@ name: Update GitHub Contributions
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # Every day at midnight UTC
-  workflow_dispatch:       # Manual trigger allowed
+    - cron: "0 0 * * *"  # Every day at midnight UTC
+  push:
+    branches:
+      - main             # Run on push to main
+  pull_request:
+    branches:
+      - main             # Run when PR is merged into main
+  workflow_dispatch:      # Allow manual trigger
 
 jobs:
   update-contributions:
@@ -18,8 +24,10 @@ jobs:
       with:
         python-version: 3.x
 
-    - name: Install requests
-      run: pip install requests
+    - name: Install Playwright
+      run: |
+        pip install playwright
+        playwright install chromium
 
     - name: Fetch and save contributions
       run: python .github/scripts/fetch_contributions.py
@@ -28,6 +36,6 @@ jobs:
       run: |
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
-        git add assets/images/contributions.svg
+        git add assets/images/contributions.json
         git commit -m "Update GitHub contributions [automated]" || echo "No changes to commit"
         git push
