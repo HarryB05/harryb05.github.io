@@ -1,0 +1,110 @@
+.skills-section {
+    margin: 0;
+    padding-bottom: 2em;
+}
+
+.skills-section h2 {
+    margin-bottom: 1em;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2em;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.skill-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    background: rgba(20, 25, 30, 0.95);
+    border-radius: 1.8em;
+    padding: 0.7em 1.4em;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.12);
+    transition: all 0.2s cubic-bezier(.4,2,.6,1);
+    cursor: pointer;
+    border: 1px solid rgba(0,170,255,0.08);
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    color: #e6edf3;
+    min-width: 120px;
+    min-height: 48px;
+    position: relative;
+}
+
+.skill-pill img {
+    width: 2em;
+    height: 2em;
+    display: block;
+    filter: drop-shadow(0 0 2px #00aaff33);
+    background: none;
+    border-radius: 0.5em;
+}
+
+.skill-pill span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1em;
+    color: #e6edf3;
+    letter-spacing: 0.01em;
+}
+
+.skill-pill:hover {
+    background: rgba(0, 170, 255, 0.10);
+    box-shadow: 0 0 16px 2px #00aaff55, 0 2px 8px 0 rgba(0,0,0,0.18);
+    transform: scale(1.07) translateY(-2px);
+    border: 1.5px solid #00aaff;
+    z-index: 2;
+}
+
+.skill-tooltip {
+    visibility: hidden;
+    opacity: 0;
+    min-width: 110px;
+    background: #222;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 10;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.95);
+    transition: all 0.2s cubic-bezier(.4,2,.6,1);
+    font-size: 0.95em;
+    pointer-events: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    white-space: nowrap;
+}
+
+.skill-pill:hover .skill-tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+@media (max-width: 700px) {
+    .skills-grid {
+        gap: 0.7em;
+    }
+    .skill-pill {
+        font-size: 0.95em;
+        min-width: 90px;
+        min-height: 40px;
+        padding: 0.5em 1em;
+    }
+    .skill-pill img {
+        width: 1.5em;
+        height: 1.5em;
+    }
+}
+
+.skills-note {
+  text-align: center;
+  font-size: 0.95em;
+  color: #888;
+  margin-top: 2em;
+} 
