@@ -202,6 +202,34 @@
     .footer-text {
         font-size: 0.6em;
     }
+
+    .modal {
+        align-items: center;
+        justify-content: center;
+        padding: 0 2vw;
+        overflow-y: auto;
+    }
+    .modal-content {
+        max-width: 96vw;
+        padding: 1em;
+        border-radius: 6px;
+        padding-top: 2.5em;
+    }
+    #modal-image {
+        max-width: 100%;
+        height: auto;
+    }
+    #project-modal .project-links {
+        flex-direction: column;
+        gap: 0.7em;
+        align-items: stretch;
+    }
+    #project-modal .github-link {
+        width: 100%;
+        justify-content: center;
+        font-size: 1em;
+        padding: 10px 0;
+    }
 }
 
 @media screen and (max-width: 48em) {

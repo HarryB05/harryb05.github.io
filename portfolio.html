@@ -34,7 +34,11 @@
 
         <section class="box-category">
             <!-- Village Blaster -->
-            <div class="box-item">
+            <div class="box-item"
+                 data-title="Village Blaster"
+                 data-description="A silly 3D game where cube people run for their lives while you practice your aim. Built with Three.js and JavaScript."
+                 data-image="assets/images/portfolio/village-blaster.png"
+                 data-links='[{"url":"https://github.com/HarryB05/village-blaster","text":"View Code"},{"url":"https://harryb05.github.io/village-blaster/","text":"Play Game"}]'>
                 <div class="box-content">
                     <div class="box-header">
                         <h3>Village Blaster</h3>
@@ -55,7 +59,10 @@
             </div>
 
             <!-- Merkle Tree -->
-            <div class="box-item">
+            <div class="box-item"
+                 data-title="Merkle Tree Implementation"
+                 data-description="A Python implementation of a Merkle Tree for learning and experimentation. Built with Python."
+                 data-links='[{"url":"https://github.com/HarryB05/merkle-tree","text":"View Code"}]'>
                 <div class="box-content">
                     <div class="box-header">
                         <h3>Merkle Tree Implementation</h3>
@@ -72,7 +79,10 @@
             </div>
 
             <!-- This Website -->
-            <div class="box-item">
+            <div class="box-item"
+                 data-title="This Website"
+                 data-description="My personal portfolio website showcasing my projects and experience. Built with HTML, CSS, and JavaScript."
+                 data-links='[{"url":"https://github.com/HarryB05/harryb05.github.io","text":"View Code"}]'>
                 <div class="box-content">
                     <div class="box-header">
                         <h3>This Website</h3>
@@ -93,9 +103,21 @@
 
 <footer></footer>
 
+<!-- Project Modal -->
+<div id="project-modal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close-button" id="close-modal">&times;</span>
+    <img id="modal-image" src="" alt="" style="display:none; max-width:100%; margin-bottom:1em;">
+    <h2 id="modal-title"></h2>
+    <p id="modal-description"></p>
+    <div id="modal-links"></div>
+  </div>
+</div>
+
 <script src="scripts/include.js"></script>
 <script src="scripts/typing-effect.js"></script>
 <script src="scripts/mobile-menu.js"></script>
+<script src="scripts/portfolio.js"></script>
 
 </body>
 </html>

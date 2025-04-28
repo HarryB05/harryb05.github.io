@@ -58,4 +58,118 @@
     direction: ltr;
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(13, 17, 23, 0.6);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 1;
+  transition: opacity 0.2s;
+  box-sizing: border-box;
+  margin: 0;
+}
+.modal.modal-fade-in {
+  animation: modal-fade-in 0.2s;
+}
+.modal.modal-fade-out {
+  animation: modal-fade-out 0.2s forwards;
+}
+.modal-content {
+  background: rgba(20, 25, 30);
+  padding: 2em;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 98%;
+  position: relative;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+}
+@keyframes modal-fade-in {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes modal-fade-out {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(0.95); opacity: 0; }
+}
+.close-button {
+  position: absolute; top: 0.25em; right: 0.5em;
+  font-size: 2em; cursor: pointer;
+  color: #888;
+  transition: color 0.2s;
+}
+.close-button:hover {
+  color: #222;
+}
+#modal-links a {
+  display: inline-block;
+  margin-right: 1em;
+  margin-top: 1em;
+  color: #0077cc;
+  text-decoration: underline;
+  font-weight: 600;
+}
+#modal-links a:hover {
+  color: #005fa3;
+}
+
+#project-modal .project-links {
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;
+  justify-content: flex-start;
+}
+
+#project-modal .github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: #24292e;
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+#project-modal .github-link:hover {
+  background-color: #2f363d;
+}
+
+#project-modal .github-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 10%;
+}
+
+#project-modal .github-link span {
+  color: white !important;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  text-decoration: none !important;
+}
+
+#project-modal .github-link .material-icons {
+  font-size: 24px !important;
+  color: white !important;
+  vertical-align: middle;
+  font-family: 'Material Icons' !important;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+body.modal-open {
+  overflow: hidden;
 } 
