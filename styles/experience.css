@@ -1,0 +1,296 @@
+/* Experience Page Styles */
+.experience-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.experience-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.experience-header h1 {
+    font-family: 'JetBrains Mono';
+    font-size: 1.875em;
+    color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    border-right: 0.125em solid transparent;
+    margin-bottom: 1rem;
+}
+
+.experience-section {
+    margin-bottom: 4rem;
+}
+
+.experience-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #e5e7eb;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(45deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.experience-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #60a5fa, #a78bfa);
+    border-radius: 2px;
+}
+
+.experience-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Special styling for volunteer section */
+.experience-section:last-child .experience-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.experience-section:last-child .experience-card {
+    flex: 0 1 350px;
+    max-width: 350px;
+}
+
+/* Ensure the last card (Oxbridge) is centered when it's alone on a row */
+.experience-section:last-child .experience-card:last-child {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.experience-card {
+    background: #1f2937;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid #374151;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    border-color: #4b5563;
+}
+
+.company-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    background: #374151;
+    padding: 0.5rem;
+}
+
+.company-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #f3f4f6;
+    margin-bottom: 0.5rem;
+}
+
+.company-name a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.company-name a:hover {
+    color: #60a5fa;
+}
+
+.role-title {
+    font-size: 1.25rem;
+    color: #d1d5db;
+    margin-bottom: 0.5rem;
+}
+
+.time-period {
+    color: #9ca3af;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.role-type {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: #374151;
+    color: #d1d5db;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.role-description {
+    color: #d1d5db;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+.role-details {
+    position: relative;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background: #374151;
+    border-radius: 0.75rem;
+    border-left: 3px solid #60a5fa;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.role-details:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 1.5rem;
+    bottom: -1rem;
+    width: 2px;
+    height: 1rem;
+    background: #4b5563;
+}
+
+.role-details:last-child {
+    margin-bottom: 0;
+}
+
+.role-timeline {
+    display: flex;
+    align-items: center;
+    min-width: 120px;
+    position: absolute;
+    left: 2rem;
+}
+
+.role-timeline .time-period {
+    color: #9ca3af;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+    background: #1f2937;
+    border-radius: 0.25rem;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.role-content {
+    flex: 1;
+    text-align: center;
+    margin-left: 140px;
+    margin-right: 140px;
+}
+
+.role-content h3 {
+    margin-bottom: 0.5rem;
+    color: #f3f4f6;
+    font-size: 1.25rem;
+}
+
+.role-content .role-type {
+    background: #1f2937;
+    color: #60a5fa;
+    border: 1px solid #60a5fa;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+/* Add a progression indicator for roles */
+.role-details::before {
+    content: '';
+    position: absolute;
+    left: -0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    background: #60a5fa;
+    border-radius: 50%;
+    border: 2px solid #1f2937;
+}
+
+/* Hover effects for role details */
+.role-details:hover {
+    background: #4b5563;
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
+.role-details:hover::before {
+    background: #a78bfa;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.role-details:hover .role-timeline .time-period {
+    background: #4b5563;
+    color: #f3f4f6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience-container {
+        padding: 1rem;
+    }
+
+    .experience-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .experience-list {
+        grid-template-columns: 1fr;
+    }
+
+    .role-timeline {
+        position: static;
+        min-width: auto;
+    }
+
+    .role-content {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: left;
+    }
+
+    .role-details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+/* Animation for cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.experience-card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.experience-card:nth-child(1) { animation-delay: 0.1s; }
+.experience-card:nth-child(2) { animation-delay: 0.2s; }
+.experience-card:nth-child(3) { animation-delay: 0.3s; }
+.experience-card:nth-child(4) { animation-delay: 0.4s; }
+.experience-card:nth-child(5) { animation-delay: 0.5s; } 

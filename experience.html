@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="/styles/navigation.css">
     <link rel="stylesheet" href="/styles/social.css">
     <link rel="stylesheet" href="/styles/responsive.css">
+    <link rel="stylesheet" href="/styles/experience.css">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 
     <!-- Material Icons -->
@@ -28,137 +29,131 @@
 <header></header>
 
 <main>
-    <section>
-        <section>
+    <div class="experience-container">
+        <div class="experience-header">
             <h1 id="typing-title" data-text="Experience"></h1>
-            <p class="page-description">See my current positions and past roles.</p>
-        </section>
+            <p class="page-description">A journey through my professional and volunteer experiences</p>
+        </div>
 
         <!-- Current Roles -->
-        <section class="box-category">
+        <section class="experience-section">
             <h2>Current Roles</h2>
-            <ul class="box-list">
-
+            <div class="experience-list">
                 <!-- Hyperlink London -->
-                <li class="box-item">
-                    <div class="box-content">
-                        <a href="https://www.hyperlinklondon.com" target="_blank">
-                            <img src="assets/images/experience/hyperlink_logo.jpeg" alt="HyperLink London Logo" class="box-logo">
-                        </a>
-                        <div class="box-header">
-                            <a href="https://www.hyperlinklondon.com" target="_blank">
-                                <h3>Hyperlink London</h3>
-                            </a>
-                            <p class="box-time"><em>Sep 2024 - Present</em></p>
+                <div class="experience-card">
+                    <a href="https://www.hyperlinklondon.com" target="_blank">
+                        <img src="assets/images/experience/hyperlink_logo.jpeg" alt="HyperLink London Logo" class="company-logo">
+                    </a>
+                    <div class="company-name">
+                        <a href="https://www.hyperlinklondon.com" target="_blank">Hyperlink London</a>
+                    </div>
+                    <p class="time-period">Sep 2024 - Present</p>
+                    
+                    <div class="role-details">
+                        <div class="role-timeline">
+                            <p class="time-period">Sep 2025 - Present</p>
+                        </div>
+                        <div class="role-content">
+                            <h3 class="role-title">Head of Electrical & Treasurer</h3>
+                            <span class="role-type">Part-Time</span>
                         </div>
                     </div>
 
-                    <div class="nested-boxs">
-                        <div class="nested-box-item">
-                            <h2>Head of Electrical & Treasurer</h2>
-                            <p class="box-time"><em>Sep 2025 - Present</em></p>
-                            <p class="box-type">Part-Time</p>
+                    <div class="role-details">
+                        <div class="role-timeline">
+                            <p class="time-period">Sep 2024 - Aug 2025</p>
                         </div>
-
-                        <div class="nested-box-item">
-                            <h2>Head of Software</h2>
-                            <p class="box-time"><em>Sep 2024 - Aug 2025</em></p>
-                            <p class="box-type">Part-Time</p>
+                        <div class="role-content">
+                            <h3 class="role-title">Head of Software</h3>
+                            <span class="role-type">Part-Time</span>
                         </div>
                     </div>
-                </li>
-
-            </ul>
+                </div>
+            </div>
         </section>
 
         <!-- Previous Employment -->
-        <section class="box-category">
+        <section class="experience-section">
             <h2>Previous Employment</h2>
-            <ul class="box-list">
-
+            <div class="experience-list">
                 <!-- CyanoCapture -->
-                <li class="box-item">
-                    <div class="box-content">
-                        <a href="https://cyanocapture.com" target="_blank">
-                            <img src="assets/images/experience/cyanocapture_logo.png" alt="CyanoCapture Logo" class="box-logo">
-                        </a>
-                        <div class="box-header">
-                            <a href="https://cyanocapture.com" target="_blank">
-                                <h3>CyanoCapture</h3>
-                            </a>
-                            <p class="box-time"><em>Jan 2023 - Aug 2024</em></p>
+                <div class="experience-card">
+                    <a href="https://cyanocapture.com" target="_blank">
+                        <img src="assets/images/experience/cyanocapture_logo.png" alt="CyanoCapture Logo" class="company-logo">
+                    </a>
+                    <div class="company-name">
+                        <a href="https://cyanocapture.com" target="_blank">CyanoCapture</a>
+                    </div>
+                    <p class="time-period">Jan 2023 - Aug 2024</p>
+                    
+                    <div class="role-details">
+                        <div class="role-timeline">
+                            <p class="time-period">Sep 2023 - Aug 2024</p>
+                        </div>
+                        <div class="role-content">
+                            <h3 class="role-title">Software Engineer</h3>
+                            <span class="role-type">Full-Time</span>
                         </div>
                     </div>
 
-                    <div class="nested-boxs">
-                        <div class="nested-box-item">
-                            <h2>Software Engineer</h2>
-                            <p class="box-time"><em>Sep 2023 - Aug 2024</em></p>
-                            <p class="box-type">Full-Time</p>
+                    <div class="role-details">
+                        <div class="role-timeline">
+                            <p class="time-period">Aug 2023 - Sep 2023</p>
                         </div>
-
-                        <div class="nested-box-item">
-                            <h2>Software Engineer Summer Intern</h2>
-                            <p class="box-time"><em>Aug 2023 - Sep 2023</em></p>
-                            <p class="box-type">Full-Time</p>
-                        </div>
-
-                        <div class="nested-box-item">
-                            <h2>Software Engineer Intern</h2>
-                            <p class="box-time"><em>Jan 2023 - May 2023</em></p>
-                            <p class="box-type">Part-Time</p>
+                        <div class="role-content">
+                            <h3 class="role-title">Software Engineer Summer Intern</h3>
+                            <span class="role-type">Full-Time</span>
                         </div>
                     </div>
-                </li>
 
-            </ul>
+                    <div class="role-details">
+                        <div class="role-timeline">
+                            <p class="time-period">Jan 2023 - May 2023</p>
+                        </div>
+                        <div class="role-content">
+                            <h3 class="role-title">Software Engineer Intern</h3>
+                            <span class="role-type">Part-Time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Volunteering Experience -->
-        <section class="box-category">
+        <section class="experience-section">
             <h2>Volunteering</h2>
-            <ul class="box-list">
+            <div class="experience-list">
                 <!-- NHS -->
-                <li class="box-item">
-                    <div class="box-content">
-                        <div class="box-header">
-                            <a href="https://www.nhs.uk" target="_blank">
-                                <h3>NHS England</h3>
-                            </a>
-                            <h2>Expert by Experience</h2>
-                            <p class="box-time"><em>Aug 2024 - Present</em></p>
-                        </div>
+                <div class="experience-card">
+                    <div class="company-name">
+                        <a href="https://www.nhs.uk" target="_blank">NHS England</a>
                     </div>
-                </li>
+                    <h3 class="role-title">Expert by Experience</h3>
+                    <p class="time-period">Aug 2024 - Present</p>
+                    <span class="role-type">Volunteer</span>
+                </div>
 
                 <!-- Blood Donation -->
-                <li class="box-item">
-                    <div class="box-content">
-                        <div class="box-header">
-                            <a href="https://www.blood.co.uk" target="_blank">
-                                <h3>NHS Blood and Transplant</h3>
-                            </a>
-                            <p class="box-time"><em>Feb 2023 - Present</em></p>
-                        </div>
+                <div class="experience-card">
+                    <div class="company-name">
+                        <a href="https://www.blood.co.uk" target="_blank">NHS Blood and Transplant</a>
                     </div>
-                </li>
+                    <p class="time-period">Feb 2023 - Present</p>
+                    <span class="role-type">Volunteer</span>
+                </div>
 
                 <!-- Oxbridge Foundation -->
-                <li class="box-item">
-                    <div class="box-content">
-                        <div class="box-header">
-                            <a href="https://www.oxbridge-foundation.org" target="_blank">
-                                <h3>The Oxbridge Foundation</h3>
-                            </a>
-                            <h2>Charity Work</h2>
-                            <p class="box-time"><em>Feb 2022</em></p>
-                        </div>
+                <div class="experience-card">
+                    <div class="company-name">
+                        <a href="https://www.oxbridge-foundation.org" target="_blank">The Oxbridge Foundation</a>
                     </div>
-                </li>
-            </ul>
+                    <h3 class="role-title">Charity Work</h3>
+                    <p class="time-period">Feb 2022</p>
+                    <span class="role-type">Volunteer</span>
+                </div>
+            </div>
         </section>
-
-    </section>
+    </div>
 </main>
 
 <footer></footer>
