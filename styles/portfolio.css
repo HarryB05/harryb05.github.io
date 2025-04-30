@@ -17,6 +17,45 @@
     margin-top: 1em;
 }
 
+.tech-pills {
+    display: flex;
+    gap: 0.5em;
+    margin-top: 1em;
+    flex-wrap: wrap;
+}
+
+.tech-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    background: rgba(20, 25, 30, 0.95);
+    border-radius: 1.8em;
+    padding: 0.5em 1em;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.12);
+    transition: all 0.2s cubic-bezier(.4,2,.6,1);
+    border: 1px solid rgba(0,170,255,0.08);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9em;
+    color: #e6edf3;
+}
+
+.tech-pill img {
+    width: 1.5em;
+    height: 1.5em;
+    display: block;
+    filter: drop-shadow(0 0 2px #00aaff33);
+    background: none;
+    border-radius: 0.3em;
+}
+
+.tech-pill:hover {
+    background: rgba(0, 170, 255, 0.10);
+    box-shadow: 0 0 16px 2px #00aaff55, 0 2px 8px 0 rgba(0,0,0,0.18);
+    transform: scale(1.05) translateY(-1px);
+    border: 1.5px solid #00aaff;
+    z-index: 2;
+}
+
 .github-link {
     display: inline-flex;
     align-items: center;
