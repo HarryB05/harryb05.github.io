@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.box-item').forEach(item => {
-    item.addEventListener('click', function() {
+    item.addEventListener('click', function(e) {
+      // Don't open modal if clicking on a project link
+      if (e.target.closest('.project-links')) {
+        return;
+      }
+      
       const modal = document.getElementById('project-modal');
       document.getElementById('modal-title').textContent = this.dataset.title;
       document.getElementById('modal-description').textContent = this.dataset.description;
