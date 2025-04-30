@@ -8,12 +8,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Function to load HTML content
-    function loadContent(file, targetSelector) {
-        console.log(`Attempting to load ${file} into ${targetSelector}`);
-        
+    function loadContent(file, targetSelector) {        
         fetch(getPath(file))
             .then(response => {
-                console.log(`Response status for ${file}: ${response.status}`);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }

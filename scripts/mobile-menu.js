@@ -3,28 +3,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const MAX_ATTEMPTS = 10;
     const RETRY_INTERVAL = 100; // milliseconds
 
-    function initializeMobileMenu() {
-        console.log('Initializing mobile menu... Attempt:', initializationAttempts + 1);
-        
+    function initializeMobileMenu() {        
         const hamburgerMenu = document.querySelector('.hamburger-menu');
         const navClose = document.querySelector('.nav-close');
         const mainNav = document.querySelector('.main-nav');
         const body = document.querySelector('body');
 
         if (!hamburgerMenu || !navClose || !mainNav) {
-            console.log('Mobile menu elements not found yet. Will retry...');
             
             if (initializationAttempts < MAX_ATTEMPTS) {
                 initializationAttempts++;
                 setTimeout(initializeMobileMenu, RETRY_INTERVAL);
                 return false;
             } else {
-                console.error('Failed to initialize mobile menu after maximum attempts');
                 return false;
             }
         }
-
-        console.log('Mobile menu elements found, setting up event listeners...');
 
         // Function to open menu
         function openMenu() {
@@ -40,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Toggle menu on hamburger click
         hamburgerMenu.addEventListener('click', function(e) {
-            console.log('Hamburger menu clicked');
             e.stopPropagation();
             if (mainNav.classList.contains('active')) {
                 closeMenu();
@@ -74,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        console.log('Mobile menu initialized successfully');
         return true;
     }
 
@@ -83,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Also listen for content loaded event
     window.addEventListener('contentLoaded', function() {
-        console.log('Content loaded event received, reinitializing mobile menu...');
         initializationAttempts = 0; // Reset attempts
         initializeMobileMenu();
     });
