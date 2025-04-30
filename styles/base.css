@@ -242,3 +242,15 @@ a {
     color: #e6edf3;
     font-size: 0.95em;
 }
+
+.box-type {
+    display: inline-block;
+    background: rgba(0, 170, 255, 0.1);
+    border: 1px solid rgba(0, 170, 255, 0.3);
+    color: #00aaff;
+    padding: 0.4em 0.8em;
+    border-radius: 1em;
+    font-size: 0.85em;
+    font-weight: 500;
+    margin-top: 0.5em;
+}
